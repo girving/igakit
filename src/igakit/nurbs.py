@@ -41,8 +41,8 @@ class NURBS(object):
         Container for control points, weights, and fields.
     control : numpy.ndarray
         Control points in homogeneous 4D space (includes rational weights).
-    weigths : numpy.ndarray
-        Rational weigths.
+    weights : numpy.ndarray
+        Rational weights.
     points : numpy.ndarray
         Control points projected into Cartesian 3D space.
     fields : numpy.ndarray or None
@@ -52,10 +52,10 @@ class NURBS(object):
     --------
 
     Create a quarter circle NURBS curve with 2D control points and
-    rational weigths and check error:
+    rational weights and check error:
 
     >>> C = [[0, 1], [1, 1], [1, 0]] # 3x2 grid of 2D control points
-    >>> w = [1, np.sqrt(2)/2, 1]     # rational weigths
+    >>> w = [1, np.sqrt(2)/2, 1]     # rational weights
     >>> U = [0,0,0, 1,1,1]           # knot vector
     >>> crv = NURBS([U], C, weights=w)
     >>> u = np.linspace(0,1,1000)
